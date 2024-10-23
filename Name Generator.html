@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+<!-- 
+To add more names:
+cmd+f var lastn, var fem, var masc, or var neutral (depending on which category you want to add the name to) and input the name in between the " ". Names are separated by spaces, no commas needed. Important to note that neutral is separate from the masculine/feminine names and if you want to add a name to both feminine and neutral, you have to input the name under both categories. Enjoy!
+-->
+
+<head> 
+<title>Oorsprong's Name Generator</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+@viewport {
+width:device-width;
+zoom:1.0;
+}
+
+body {
+text-align:center;
+font-family:georgia;
+background:#4fbeda;
+padding-bottom:5%;
+}
+
+i {
+text-align:center;
+}
+
+input {
+background:#4f925b;
+color:white;
+border-radius:30px;
+border-color:#4f925b;
+font-size:15px;
+padding:5px;
+margin-left:5px;
+margin-top:5px;
+}
+
+input:hover {
+background:#417348;
+transition:0.3s;
+}
+
+div {
+justify-content: center;
+width: 100%;
+align-items:center;
+}
+
+#footer {
+padding-top: 15px;
+padding-bottom: 10px;
+}
+
+span {
+margin-left: 0.3em;
+font-family:verdana;
+font-size:25px;
+text-wrap:wrap;
+}
+
+h1 {
+font-family:georgia;
+color:#4fbeda;
+}
+
+#post {
+background:white;
+width:75%;
+padding:2%;
+border-radius:2%;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+p {
+    font-size:0.9em;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<br>
+
+<div id="post"> 
+
+<h1>Oorsprong's Name Generator
+</h1>
+
+<input type="button" id="Masc" value="Masculine" onclick="MascNames(); lastValue()" />
+
+<input type="button" id="Fem" value="Feminine" onclick="FemNames(); lastValue()" />
+
+<input type="button" id="Neutral" value="Gender Neutral" onclick="GetValue(); lastValue()" />
+
+<div>
+
+<br>
+
+<p>Your name is...</p>
+
+<span id="firstname" ></span>&nbsp;<span id="lastname" ></span>
+
+</div>
+<div id="footer">Enjoy!</div>
+
+<script>
+document.addEventListener('dblclick', (event) => {
+    event.preventDefault()
+}, { passive: false });
+
+
+function GetValue()
+
+{
+	var neutral = "Affray Aglandby Agrapina Aleby Alethea Alice Allured Amphillis Anastatia Anna Anne Anstid Archibella Audrey Avice Avis Bathonia Beaty Bennett Bennett Bethial Billedge Bithia Blanch Blandina Blith Blithe Bridget Bridget Casia Catharine Chrisogan Christabell Christian Christiana Christobell Cicilie Clemence Collet Darnigold Deliverance Diana Dionese Dionis Dionysia Discipline Duglas Dulcibella Elhamah Elianora Ellenor Ellyott Emblin Emlin Emott Epiphania Essex Ethelred Eva Evarell Experientia Fayles Flower Fortune Frances Fridiswide Friswith Genieve Godly Griselle Grizegon Gylmen Hellenor Henrietta Henrietta Hester Hester Hester Honor Humfrida Jael Jaell Katurah Lake Lettice Lofte Lovise Lucretia Lucy Mabella Manon Margaretta Margate Maria Mary Melior Michiell Mildred Millicent Mudwin Neale Olimpa Olive Oriana Parson Pascady Petronella Phebe Philadelphia Priscilla Richardina Robina Sarah Saunderina Selina Sibell Sicily Sicily Stacie Susanna Sysley Temperance Theophania Thomasia Timothea Ursula Victory Violette Wilcifride Winefred Wyborough Astrabold Balthazar Bamber Basil Belisarius Buttulph Caius Champion Cheyney Clobery Cresheld Cromwell Dod Dowse Dudley Duncombe Dymock Elizeumn Everingham Fanstone Fooke German Granado Greaves Grivell Gyfford Harecourt Heigham Hercules Hungerford Jenkins Julius Justinian Kenricke Kingsmill Lawde Loftus Lovet Lyming Marmaduke Marmaduke Mordaunt Muzio Orlando Otwelll Papworth Price Ralf Redmayne Scorey Sedgwick Sherrard Skynner Stafford Stint Tedge Tutcher Uryon Uvedall Valentine Walgrave Welbore";
+    var myarray = [];
+    myarray = neutral.split(" ");
+    var random = myarray[Math.floor(Math.random() * myarray.length)];
+    document.getElementById("firstname").innerHTML=random;
+
+}
+
+
+function MascNames()
+
+{
+	var masc = "Astrabold Balthazar Bamber Basil Belisarius Buttulph Caius Champion Cheyney Clobery Cresheld Cromwell Dod Dowse Dudley Duncombe Dymock Elizeumn Everingham Fanstone Fooke German Granado Greaves Grivell Gyfford Harecourt Heigham Hercules Hungerford Jenkins Julius Justinian Kenricke Kingsmill Lawde Loftus Lovet Lyming Marmaduke Marmaduke Mordaunt Muzio Orlando Otwelll Papworth Price Ralf Redmayne Scorey Sedgwick Sherrard Skynner Stafford Stint Tedge Tutcher Uryon Uvedall Valentine Walgrave Welbore";
+
+    var myarray = [];
+    myarray = masc.split(" ");
+    var random = myarray[Math.floor(Math.random() * myarray.length)];
+    document.getElementById("firstname").innerHTML=random;
+}
+
+
+function FemNames()
+
+{
+	var fem = "Affray Aglandby Agrapina Aleby Alethea Alice Allured Amphillis Anastatia Anna Anne Anstid Archibella Audrey Avice Avis Bathonia Beaty Bennett Bennett Bethial Billedge Bithia Blanch Blandina Blith Blithe Bridget Bridget Casia Catharine Chrisogan Christabell Christian Christiana Christobell Cicilie Clemence Collet Darnigold Deliverance Diana Dionese Dionis Dionysia Discipline Duglas Dulcibella Elhamah Elianora Ellenor Ellyott Emblin Emlin Emott Epiphania Essex Ethelred Eva Evarell Experientia Fayles Flower Fortune Frances Fridiswide Friswith Genieve Godly Griselle Grizegon Gylmen Hellenor Henrietta Henrietta Hester Hester Hester Honor Humfrida Jael Jaell Katurah Lake Lettice Lofte Lovise Lucretia Lucy Mabella Manon Margaretta Margate Maria Mary Melior Michiell Mildred Millicent Mudwin Neale Olimpa Olive Oriana Parson Pascady Petronella Phebe Philadelphia Priscilla Richardina Robina Sarah Saunderina Selina Sibell Sicily Sicily Stacie Susanna Sysley Temperance Theophania Thomasia Timothea Ursula Victory Violette Wilcifride Winefred Wyborough";
+    var myarray = [];
+    myarray = fem.split(" ");
+    var random = myarray[Math.floor(Math.random() * myarray.length)];
+    document.getElementById("firstname").innerHTML=random;
+}
+
+
+function lastValue()
+{
+	var lastn = "Abell Aber&nbsp;Cromey Andrewes Arxden Ashton Aspinall Baker Bale Barefoote Barker Barr Beaufoy Bee Bellies Bendish Bishop Bludder Blundell Bomelimnn Boucher Branfill Brereton Bridges Bridges Brisley Bromley Brydges Buck Buckeridge Bull Burrell Burton Byde Caesar Carlill Castle Champnys Charlton Checkley Chester Child Cibber Clarke Clarrys Clemente Clementi Clinkard Clutterbook Conisby Constable Cooke Corbett Cordell Cowper Cracherode Cressy Crewe Crompton Culpepper Dacre Daly Dawgs de&nbsp;Carterett de&nbsp;Garencieres Devereux Diamond Dickenson Disbrowe Dodd Dodson Dowghtie Draper Ducate Duckenfield Dunch Duncombe Edmonds Eldridge Ellis Ely Emery Eyre Eyton Fairborne Ferne Fettiplace Figge Finen Firebrace Firebrace Flewellin Foane Formose Fox Franck French Fuller Gabriel Gascoigne Gates Gedney Gee Gibbs Gill Godscall Goodenough Grimstone Gutteridge Hales Harrison Havord Hawkins Henshawe Hext Honywood Hooker Hope Hopkins Humphreys Hunsdon Hunt Jewell Kiligrew Kingesfield Knight Lawrence Lewys Ley Lunt Merriman Merritt Michaelwright Milkesopp Minterne Minus Mood Moose More Moreau Nokes Parke Pattinson Pechey Pinchion Pollard Popple Price Ridgly Roberts Rolt Sanders Silvester Slater Smith Snelling Soane Tahurean Taylor Thacker Tryon Tuko Turpin Tyndall Valentine Warner Wesopp Whiteston Whitney Williams Willis Willoughbie Witham Wright Wyngham";
+    var last = [];
+    last = lastn.split(" ");
+    var random = last[Math.floor(Math.random() * last.length)];
+document.getElementById("lastname").innerHTML=random;
+}
+
+</script>
+
+</body>
+
+</html>
